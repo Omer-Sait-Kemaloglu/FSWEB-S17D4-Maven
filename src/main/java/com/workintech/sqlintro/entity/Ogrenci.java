@@ -4,11 +4,14 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Entity
+@Component
 @Table(name = "ogrenci")
 public class Ogrenci {
     @Id
@@ -21,25 +24,4 @@ public class Ogrenci {
     private int puan;
     @Column(nullable = true)
     private String dtarih;
-
-
-        // Diğer alanlar ve metodlar
-
-        public String getAd() {
-            return ad;
-        }
-
-        public void setAd(String ad) {
-            this.ad = ad;
-        }
-
-        public String getSoyad() {
-            return soyad;
-        }
-
-        public void setSoyad(String soyad) {
-            this.soyad = soyad;
-        }
-    }
-
-
+}
